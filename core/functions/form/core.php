@@ -58,4 +58,6 @@ function validate_form(array &$form, array $form_values): bool
     }
 
     return $is_valid;
+
 }
+

@@ -9,25 +9,26 @@ function nav()
 		],
 		'Login' => [
 			'path' => '../login.php',
-			'visible' => true,
+			'visible' => is_logged_in(),
 		],
 		'Register' => [
 			'path' => '../register.php',
-			'visible' => true,
+			'visible' => is_logged_in(),
 		],
 		'Cash-in' => [
 			'path' => '../users/cash-in.php',
-			'visible' => true,
+			'visible' => is_logged_in(),
 		],
 		'Play' => [
 			'path' => '../users/play.php',
-			'visible' => true,
+			'visible' => is_logged_in(),
 		],
 		'Logout' => [
 			'path' => '../logout.php',
-			'visible' => true,
+			'visible' => is_logged_in(),
 		],
 	];
 
 	return $nav_array;
 }
+
