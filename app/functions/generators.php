@@ -9,11 +9,11 @@ function nav()
 		],
 		'Login' => [
 			'path' => '../login.php',
-			'visible' => is_logged_in(),
+			'visible' => !is_logged_in(),
 		],
 		'Register' => [
 			'path' => '../register.php',
-			'visible' => is_logged_in(),
+			'visible' => !is_logged_in(),
 		],
 		'Cash-in' => [
 			'path' => '../users/cash-in.php',
