@@ -34,6 +34,7 @@ $table = [
     <?php require ROOT . './core/templates/nav.tpl.php';?>
 </header>
 <main>
+    <h2>Players stats</h2>
     <article class="wrapper table_box">
         <?php require ROOT . '/core/templates/table.tpl.php'; ?>
     </article>
