@@ -55,3 +55,4 @@ function is_registered(): bool
     }
 
     return false;
+}
