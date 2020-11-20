@@ -4,9 +4,9 @@ require '../bootloader.php';
 
 $nav_array = nav();
 
-//if (is_logged_in()) {
-//    header('Location: /admin/add.php');
-//}
+if (is_logged_in()) {
+ header('Location: index.php');
+}
 
 $form = [
     'attr' => [
@@ -30,7 +30,7 @@ $form = [
         ],
         'password' => [
             'label' => 'Password',
-            'type' => 'text',
+            'type' => 'password',
             'validators' => [
                 'validate_field_not_empty',
             ],
