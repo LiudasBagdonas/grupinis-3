@@ -32,7 +32,7 @@ $form = [
 
         'email' => [
             'label' => 'Email *',
-            'type' => 'text',
+            'type' => 'email',
             'validators' => [
                 'validate_field_not_empty',
                 'validate_email',
@@ -47,7 +47,7 @@ $form = [
         ],
         'password' => [
             'label' => 'Password *',
-            'type' => 'text',
+            'type' => 'password',
             'validators' => [
                 'validate_field_not_empty',
                 'validate_password_length',
@@ -61,7 +61,7 @@ $form = [
         ],
         'password_repeat' => [
             'label' => 'Repeat password *',
-            'type' => 'text',
+            'type' => 'password',
             'validators' => [
                 'validate_field_not_empty',
             ],
