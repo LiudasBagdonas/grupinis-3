@@ -1,0 +1,119 @@
+/*================================*\
+  # Default Settings
+\*================================*/
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('https://c1.wallpaperflare.com/preview/428/215/784/arcade-chair-arcade-machine-retro.jpg');
+}
+
+/*================================*\
+  # Wrapper Settings
+\*================================*/
+
+.wrapper {
+    width: 800px;
+    margin: 0 auto;
+}
+
+/*================================*\
+  # Navigation Settings
+\*================================*/
+
+header {
+    margin: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+li {
+    list-style: none;
+    position: relative;
+    overflow: hidden;
+    padding: 6px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+li:after {
+    content: '';
+    position: absolute;
+    bottom: -100%;
+    left: -0%;
+    height: 100%;
+    width: 100%;
+    border-bottom: 2px solid gold;
+    transition: .4s;
+    z-index: -1;
+}
+
+li:hover:after {
+    bottom: 0;
+    box-shadow: 0 -20px 20px 5px gold;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px black;
+}
+/*-----------*\
+# Login Form
+/*--------- */
+
+.login_form {
+    width: 300px;
+    padding: 20px;
+    /*background: ivory;*/
+    /*border-radius: 15px;*/
+    box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.15);
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+}
+.login_form input, button {
+    margin: 10px 0;
+    padding: 10px;
+    outline: none;
+    border: 2px solid grey;
+    border-radius: 10px;
+}
+.login_form_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_form label {
+    color: ivory;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+}
+
+.login_form button {
+    margin-left: 12.5%;
+    width: 50%;
+}
+.login_form .error {
+    color: yellow;
+    font-weight: bold;
+    font-size: 17px;
+}
