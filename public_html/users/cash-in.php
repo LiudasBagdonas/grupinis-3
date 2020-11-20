@@ -7,7 +7,7 @@ $nav_array = nav();
 $player_array = file_to_array(DB_FILE);
 
 foreach($player_array as $player) {
-    if ($player['nickname'] === $_SESSION['nickname'])
+    if ($player['email'] === $_SESSION['email'])
     {
         $curent_player = $player;
     }
@@ -48,7 +48,7 @@ $clean_inputs = get_clean_input($form);
 if ($clean_inputs) {
     if (validate_form($form, $clean_inputs)) {
         foreach($player_array as &$player) {
-            if ($player['nickname'] === $curent_player['nickname'])
+            if ($player['email'] === $curent_player['email'])
             {
                 $player['cash'] += $clean_inputs['more_cash'];
                 array_to_file($player_array, DB_FILE);
