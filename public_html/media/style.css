@@ -74,9 +74,9 @@ a {
     font-weight: bold;
     text-shadow: 2px 2px black;
 }
-/*-----------*\
-# Login Form
-/*--------- */
+/*================================*\
+  # Login Form Settings
+\*================================*/
 
 .login_form {
     width: 300px;
@@ -116,4 +116,32 @@ a {
     color: yellow;
     font-weight: bold;
     font-size: 17px;
+}
+
+/*================================*\
+  # Statistics table Settings
+\*================================*/
+.table_box {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+.table_box table {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+.table_box table th {
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.table_box table td {
+    text-align: center;
+}
+.table_box table td:first-child {
+    text-align: left;
+    padding: 5px 10px;
 }
