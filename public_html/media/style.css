@@ -158,6 +158,56 @@ form button:active {
     box-shadow: 0 5px rgb(200, 170, 0);
     transform: translateY(4px);
 }
-.input_error {
+.error {
     color: yellow;
 }
+
+/*================================*\
+  # Login Form Settings
+\*================================*/
+
+.login_form {
+    width: 300px;
+    padding: 20px;
+    /*background: ivory;*/
+    /*border-radius: 15px;*/
+    box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.15);
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.login_form_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*================================*\
+  # Statistics table Settings
+\*================================*/
+.table_box {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+.table_box table {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+.table_box table th {
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.table_box table td {
+    text-align: center;
+}
+.table_box table td:first-child {
+    text-align: left;
+    padding: 5px 10px;
+}
+

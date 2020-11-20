@@ -1,34 +1,34 @@
 <?php
 
-
 function nav()
 {
-    $nav_array = [
-        'Stats' => [
-            'path' => '../index.php',
-            'visible' => true,
-        ],
-        'Login' => [
-            'path' => '../login.php',
-            'visible' => true,
-        ],
-        'Register' => [
-            'path' => '../register.php',
-            'visible' => true,
-        ],
-        'Cash-in' => [
-            'path' => '../users/cash-in.php',
-            'visible' => true,
-        ],
-        'Play' => [
-            'path' => '../users/play.php',
-            'visible' => true,
-        ],
-        'Logout' => [
-            'path' => '../logout.php',
-            'visible' => true,
-        ],
-    ];
+	$nav_array = [
+		'Stats' => [
+			'path' => '../index.php',
+			'visible' => true,
+		],
+		'Login' => [
+			'path' => '../login.php',
+			'visible' => is_logged_in(),
+		],
+		'Register' => [
+			'path' => '../register.php',
+			'visible' => is_logged_in(),
+		],
+		'Cash-in' => [
+			'path' => '../users/cash-in.php',
+			'visible' => is_logged_in(),
+		],
+		'Play' => [
+			'path' => '../users/play.php',
+			'visible' => is_logged_in(),
+		],
+		'Logout' => [
+			'path' => '../logout.php',
+			'visible' => is_logged_in(),
+		],
+	];
 
-    return $nav_array;
+	return $nav_array;
 }
+

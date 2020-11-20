@@ -1,4 +1,5 @@
 <?php
+
 // //////////////////////////////
 // [1] FORM VALIDATORS
 // //////////////////////////////
@@ -29,6 +30,7 @@ function validate_fields_match($form_values, array &$form, array $params): bool
 // //////////////////////////////
 // [2] FIELD VALIDATORS
 // //////////////////////////////
+
 
 /**
  * Check if field is not empty
@@ -65,27 +67,6 @@ function validate_field_contains_space(string $field_value, array &$field): bool
     return true;
 }
 
-/**
- * Chef if number is within the min and max range.
- *
- * @param string $field_value
- * @param array $field
- * @param array $params
- * @return bool
- */
-function validate_field_range(string $field_value, array &$field, array $params): bool
-{
-    if ($field_value < $params['min'] || $field_value > $params['max']) {
-        $field['error'] = strtr('Insert a number between @min - @max!', [
-            '@min' => $params['min'],
-            '@max' => $params['max']
-        ]);
-
-        return false;
-    }
-
-    return true;
-}
 
 /**
  * Check if selected value is one of the possible options in options array
@@ -115,7 +96,8 @@ function validate_select(string $field_input, array &$field): bool
 function validate_email(string $field_value, array &$field): bool
 {
     if (!preg_match('/[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+.[a-zA-Z]{2,4}/', $field_value)) {
-        $field['error'] = 'Invalid email';
+
+        $field['error'] = 'Invalid email format';
 
         return false;
     }
@@ -156,3 +138,4 @@ function validate_password_length(string $field_value, array &$field): bool
 
     return true;
 }
+

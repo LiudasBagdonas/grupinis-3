@@ -1,7 +1,4 @@
 <?php
-// //////////////////////////////
-// [1] FORM VALIDATORS
-// //////////////////////////////
 
 /**
  * Check if login is successful
@@ -15,21 +12,19 @@ function validate_login($form_values, array &$form): bool
     $db_data = file_to_array(DB_FILE);
 
     foreach ($db_data as $entry) {
+
         if ($form_values['email'] === $entry['email']
             && $form_values['password'] === $entry['password']) {
 
             return true;
         }
     }
-
-    $form['error'] = 'Unable to login: check your email and/or password';
+    $form['error'] = 'Email or password does not match';
 
     return false;
 }
 
-// //////////////////////////////
-// [2] FIELD VALIDATORS
-// //////////////////////////////
+
 
 /**
  * Check if email is available for registration, i.e. if it is not already taken
@@ -75,3 +70,4 @@ function validate_new_item(string $field_value, array &$field): bool
 
     return true;
 }
+

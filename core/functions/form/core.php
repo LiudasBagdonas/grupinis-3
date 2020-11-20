@@ -1,6 +1,5 @@
 <?php
 
-
 /**
  * Get form inputs and filter them (e.g. sanitize special characters).
  *
@@ -59,4 +58,6 @@ function validate_form(array &$form, array $form_values): bool
     }
 
     return $is_valid;
+
 }
+
