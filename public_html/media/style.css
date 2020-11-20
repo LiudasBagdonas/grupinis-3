@@ -13,6 +13,7 @@ body {
     background-image: url('https://c1.wallpaperflare.com/preview/428/215/784/arcade-chair-arcade-machine-retro.jpg');
 }
 
+
 /*================================*\
   # Wrapper Settings
 \*================================*/
@@ -21,6 +22,7 @@ body {
     width: 800px;
     margin: 0 auto;
 }
+
 
 /*================================*\
   # Navigation Settings
@@ -210,4 +212,3 @@ form button:active {
     text-align: left;
     padding: 5px 10px;
 }
-

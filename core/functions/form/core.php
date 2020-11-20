@@ -42,6 +42,7 @@ function validate_form(array &$form, array $form_values): bool
         }
     }
 
+
     if (isset($form['validators'])) {
         foreach ($form['validators'] as $validator_index => $validator) {
             if (is_array($validator)) {
@@ -52,12 +53,12 @@ function validate_form(array &$form, array $form_values): bool
 
             if (!$field_is_valid) {
                 $is_valid = false;
+
                 break;
             }
         }
     }
 
+
     return $is_valid;
-
 }
-

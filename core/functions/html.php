@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Iš duoto duomenų masyvo sukuria atributus
  * deklaruojantį tekstą HTML elementui. (pavadinimas="vertė")
