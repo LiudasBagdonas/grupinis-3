@@ -32,3 +32,12 @@ function nav()
 	return $nav_array;
 }
 
+function fix_array() {
+    $rows = file_to_array(DB_FILE);
+
+    foreach ($rows as &$row) {
+        unset($row['email']);
+        unset($row['password']);
+    }
+    return $rows;
+}

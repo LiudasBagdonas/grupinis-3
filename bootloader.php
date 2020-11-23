@@ -9,6 +9,7 @@ define('DB_FILE', ROOT . '/app/data/db.json');
 require 'app/functions/form/validators.php';
 require 'app/functions/auth.php';
 require 'app/functions/generators.php';
+require 'app/functions/game.php';
 
 // Core
 require 'core/functions/file.php';

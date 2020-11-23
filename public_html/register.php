@@ -102,14 +102,15 @@ if ($clean_inputs) {
 
         // Get data from file
         $input_from_json = file_to_array(ROOT . '/app/data/db.json');
-        $clean_inputs['cash']= 0;
-        $clean_inputs['play']= 0;
+        $clean_inputs['cash'] = 0;
+        $clean_inputs['play'] = 0;
         // Append new data from form
         $input_from_json[] = $clean_inputs;
         // Save old data together with appended data back to file
         array_to_file($input_from_json, ROOT . '/app/data/db.json');
 
         $text_output = 'Registration is OK';
+        header("Location: /index.php");
     } else {
         $text_output = 'Registration failed';
     }
@@ -117,24 +118,28 @@ if ($clean_inputs) {
 
 ?>
 <html>
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Naujo vartotojo registracija</title>
-        <link rel="stylesheet" href="media/style.css">
+    <link rel="stylesheet" href="media/style.css">
 </head>
+
 <body>
-    <article class="wrapper">
-        <header>
+    <header>
+        <article class="wrapper">
             <?php require ROOT . '/core/templates/nav.tpl.php' ?>
-        </header>
-    </article>
+        </article>
+    </header>
     <main>
-        <h2>Register</h2>
-        <?php require ROOT . '/core/templates/form.tpl.php'; ?>
-        <h3 class="registration_error"><?php if (isset($text_output)) print $text_output; ?></h3>
+        <article class="wrapper">
+            <h2>Register</h2>
+            <?php require ROOT . '/core/templates/form.tpl.php'; ?>
+            <?php if ($text_output ?? false) : ?>
+                <h3 class="registration_error"><?php print $text_output; ?> </h3>
+            <?php endif; ?>
+        </article>
     </main>
 </body>
+
 </html>
